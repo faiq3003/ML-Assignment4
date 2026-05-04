@@ -27,9 +27,9 @@ Evaluated on the MINDsmall_dev split, the model demonstrates significant discrim
 
 | Metric | Result | Interpretation |
 | :--- | :--- | :--- |
-| **AUC** | 0. | The model ranks clicked articles above non-clicked articles more often than random, showing useful personalization signal. |
-| **MRR** | 0.296 | On average, clicked articles appear reasonably high in the ranked candidate list, though there is still room for stronger top-rank precision. |
-| **nDCG@5** | 0.327 | The top 5 recommendations contain meaningful clicked-item signal, which is important because users usually inspect only the first few articles. |
-| **nDCG@10** | 0.382 | Ranking quality improves when considering the top 10, suggesting relevant articles are often present but not always placed at the very top. |
+| **AUC** | 0.726 | The model ranks clicked articles above non-clicked articles more often than random, showing useful personalization signal. |
+| **MRR** | 0.331 | On average, clicked articles appear reasonably high in the ranked candidate list, though there is still room for stronger top-rank precision. |
+| **nDCG@5** | 0.300 | The top 5 recommendations contain meaningful clicked-item signal, which is important because users usually inspect only the first few articles. |
+| **nDCG@10** | 0.401 | Ranking quality improves when considering the top 10, suggesting relevant articles are often present but not always placed at the very top. |
 
 5. Critical AnalysisWhile the NRMS architecture excels at modeling text-based preference, the Representation Gap in cold-start scenarios remains a primary bottleneck. When a user history is sparse , the attention mechanism lacks the necessary queries to form a precise preference vector.Future research iterations will explore Knowledge-Aware Embeddings using the MIND entity/relation vectors to provide external semantic grounding for low-frequency articles.
